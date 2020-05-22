@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: bisque;
+    min-height: 80vh;
+    min-height: calc(100vh - 150px);
+    background-image: url("../img/ocean.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+}
+.login-box{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+
+  }
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    text-shadow: 3px 3px 5px grey,
+    0 0 1em grey,
+    0 0 0.2em grey;
+    padding: 13px 0;
+}
+.textbox a{
+    width: 26px; 
+    float: left;
+    border : 10px solid black; 
+    border-image-width : 30px;  
+    border-image-source : linear-gradient(to right, red , green);
+  } 
+.textbox input[type="email"]{
+    background-image:url("../img/css_sprites-3.png");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-size:20%;
+    position: left; 
+    color: black;
+    font-size: 14px;
+    width: 70%;
+}
+.btn{
+    width: 20%;
+    display: inline-block; 
+    font-size: 16px;
+    background-color:  #ffffff;;
+    box-shadow: -1px -1px 3px #800000,
+    inset 0 0 10px -1px brown;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    color:black;
+    cursor: pointer;
+}
+.btn:hover{
+    /* color:  #f00; */
+   background-image: linear-gradient(135deg, blue, white, red);
+    font-style: normal;
+    font-weight: bolder;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="radio"]{
+    display: none;
+}
+/* .unchecked {
+    display: none;
+}
+.checked{
+    display: none; 
+}
+.r_negative{
+    display: none; 
+}
+.r_positive{
+    display: none; 
+} */
+#unchecked {
+    margin-left:180px;
+}
+#r_negative {
+    margin-left:180px;
+}
+ label {
+    display: inline-block;
+    margin-top:10px;
+    border: 1px solid blueviolet;
+    background-color:  #ffffff;
+    box-shadow: -1px -1px 3px #800000,
+    inset 0 0 10px -1px brown;
+    background-image: linear-gradient(135deg, blue, white, red);
+    color:black;
+    width: 20%;
+   text-align: center;
+   font-size: 16px;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-left: -10px;
+    margin-right: 10px;
+    background-size: 300%;
+    background-position: -16px bottom;
+    background-repeat:no-repeat;
+    background-image: url("../img/css_sprites.png");
+    
+}
+input[type="checkbox"]:checked + label::before {
+    content: '';
+    background-size: 300%;
+    background-position:-31px bottom;
+    background-repeat:no-repeat;
+    background-image: url("../img/css_sprites.png");
+}
+input[type="radio"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-left: -10px;
+    margin-right: 10px;
+    background-size: 700%;
+    background-position: -8px top;
+    background-repeat:no-repeat;
+    background-image: url("../img/css_sprites.png");
+    
+}
+input[type="radio"]:checked + label::before {
+    content: '';
+    background-size: 700%;
+    background-position: -23px top; 
+    background-image: url("../img/css_sprites.png");
+}
+footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color:white;
+    height: 150px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: black;
+    font-size: 1em;
+}
+
+.social a {
+    background:url("../img/sprites_image.png");
+    background-repeat:no-repeat;
+    height:47px;
+    width:47px;
+    display: inline-block;
+    border-radius: 100%;
+    justify-content: center;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    position: relative;
+    top:50;
+    left:40%;
+}
+
+a.facebook { background-position: left top;}
+a.net { background-position:-57px top;}
+a.linkid {background-position:-115px top; }
+a.pin{ background-position: -174px top;}
+a.share{ background-position: -228px top;}
+a.youtube{ background-position: -282px top;}
+a:hover{ background-position-y:bottom;}
